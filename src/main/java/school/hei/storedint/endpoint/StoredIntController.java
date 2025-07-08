@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class StoredIntController {
 
-  private static final Path FILE_PATH = Paths.get("stored-int.txt");
+  private static final Path FILE_PATH = Paths.get("/tmp/stored-int.txt");
 
   @GetMapping("/stored-int")
   public String getStoredInt() throws InterruptedException, IOException {
