@@ -16,7 +16,8 @@ public class StoredIntController {
 
   @GetMapping("/stored-int")
   public String getStoredInt() throws InterruptedException, IOException {
-    Thread.sleep(10_000);
+    for (long i = 0; i < 10L * Integer.MAX_VALUE; i++)
+      ;
     if (Files.exists(FILE_PATH)) {
       String content = Files.readString(FILE_PATH).trim();
       return "Stored value: " + content;
