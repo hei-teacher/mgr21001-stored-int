@@ -16,7 +16,7 @@ public class StoredIntController {
 
   @GetMapping("/stored-int")
   public String getStoredInt() throws InterruptedException, IOException {
-    for (long i = 0; i < 5L * Integer.MAX_VALUE; i++)
+    for (long i = 0; i < 1L * Integer.MAX_VALUE; i++)
       ;
     if (Files.exists(FILE_PATH)) {
       String content = Files.readString(FILE_PATH).trim();
